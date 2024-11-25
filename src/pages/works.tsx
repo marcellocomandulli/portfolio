@@ -2,7 +2,12 @@ import Navbar from "../components/Navbar";
 import { Helmet } from "react-helmet";
 
 export default function Works() {
-  const projects = [
+  interface Project {
+    id: number;
+    img: JSX.Element;
+    par: JSX.Element;
+  }
+  const projects: Project[] = [
     {
       id: 0,
       img: (
@@ -109,7 +114,7 @@ export default function Works() {
         <title>Works | Marcello Web Developer</title>
         <meta name="description" content="Here you can find all my works." />
       </Helmet>
-      
+
       <Navbar />
       <h1 className="text-4xl text-center">I miei progetti</h1>
 
@@ -119,8 +124,10 @@ export default function Works() {
             key={project.id}
             className="w-96 h-72 p-2 my-7 rounded shadow md:mx-7 "
           >
-            <div className="m-3 rounded shadow">{project.img}</div>
-            <div className="">{project.par}</div>
+            <figure className="m-3 rounded shadow">
+              {project.img}
+              <figcaption className="">{project.par}</figcaption>
+            </figure>
           </div>
         ))}
       </div>

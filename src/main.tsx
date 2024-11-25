@@ -4,11 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Works from "./pages/works.tsx";
-import About from "./pages/about.tsx";
 import Contacts from "./pages/contacts.tsx";
-
-
-
 
 const router = createBrowserRouter([
   {
@@ -18,10 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/works",
     element: <Works/>,
-  },
-  {
-    path: "/about",
-    element: <About />,
   },
   {
     path: "/contacts",
