@@ -12,7 +12,7 @@ export default function Works() {
       id: 0,
       img: (
         <img
-          src=""
+          src="/img/works/FinalProj.png"
           alt="ItalyCharge. L'app per trovare le colonnine di ricarica delle auto elettriche."
         />
       ),
@@ -31,7 +31,7 @@ export default function Works() {
       id: 1,
       img: (
         <img
-          src=""
+          src="/img/works/ReactProj.png"
           alt="VegetariApp. La mia prima vera app interamente sviluppata con React.js."
         />
       ),
@@ -47,7 +47,7 @@ export default function Works() {
       id: 2,
       img: (
         <img
-          src=""
+          src="/img/works/JSAdvanced.png"
           alt="Un progetto più avanzato in JavaScript con l'utilizzo di API."
         />
       ),
@@ -62,7 +62,7 @@ export default function Works() {
       id: 3,
       img: (
         <img
-          src=""
+          src="/img/works/JSBasic.png"
           alt="Questo è un piccolo progetto per muovere i primi passi in JavaScript."
         />
       ),
@@ -79,7 +79,7 @@ export default function Works() {
       id: 4,
       img: (
         <img
-          src=""
+          src="/img/works/portfolio1.png"
           alt="Il mio primo portfolio in cui ho inserito i primi progetti realizzati."
         />
       ),
@@ -95,7 +95,7 @@ export default function Works() {
       id: 5,
       img: (
         <img
-          src=""
+          src="/img/works/Hotel.png"
           alt="Il mio primo progetto in HTML e CSS per creare il sito web di un hotel fittizio."
         />
       ),
