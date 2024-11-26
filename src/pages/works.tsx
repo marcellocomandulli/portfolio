@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { Helmet } from "react-helmet";
 
@@ -5,8 +6,10 @@ export default function Works() {
   interface Project {
     id: number;
     img: JSX.Element;
-    par: JSX.Element;
+    title: string;
+    par: string;
   }
+
   const projects: Project[] = [
     {
       id: 0,
@@ -14,18 +17,11 @@ export default function Works() {
         <img
           src="/img/works/FinalProj.png"
           alt="ItalyCharge. L'app per trovare le colonnine di ricarica delle auto elettriche."
+          className="rounded-lg"
         />
       ),
-      par: (
-        <p>
-          Questo è stato il progetto finale del mio Master come Front End
-          Developer su{" "}
-          <a href="https://www.start2impact.it/?utm_source=google&utm_medium=cpc&utm_campaign=Search_Brand&gad_source=1&gclid=Cj0KCQiAuou6BhDhARIsAIfgrn5CQEM84m5GVfyu1APLW0N6tku9kZ1B62ruUDNL0TXPjhaNiQeuRBUaAjVpEALw_wcB">
-            Start2Impact
-          </a>{" "}
-          di cui sono molto soddisfatto
-        </p>
-      ),
+      title: "ItalyCharge",
+      par: "Questo è stato il progetto finale del mio Master come Front End Developer su Start2Impact di cui sono molto soddisfatto.",
     },
     {
       id: 1,
@@ -33,15 +29,11 @@ export default function Works() {
         <img
           src="/img/works/ReactProj.png"
           alt="VegetariApp. La mia prima vera app interamente sviluppata con React.js."
+          className="rounded-lg"
         />
       ),
-      par: (
-        <p>
-          La mia prima vera app scritta interamente in React.js. Permette di
-          cercare ricette vegetariane utilizzando le API di{" "}
-          <a href="https://spoonacular.com/food-api">Spoonacular.</a>
-        </p>
-      ),
+      title: "VegetariApp",
+      par: "La mia prima vera app scritta interamente in React.js. Permette di cercare ricette vegetariane utilizzando le API di Spoonacular.",
     },
     {
       id: 2,
@@ -49,14 +41,11 @@ export default function Works() {
         <img
           src="/img/works/JSAdvanced.png"
           alt="Un progetto più avanzato in JavaScript con l'utilizzo di API."
+          className="rounded-lg"
         />
       ),
-      par: (
-        <p>
-          Qui ho imparato a fare la chiamata API con JavaScript per poter
-          stampare a schermo delle informazioni giornalistiche.
-        </p>
-      ),
+      title: "JS Advanced",
+      par: "Qui ho imparato a fare la chiamata API con JavaScript per poter stampare a schermo delle informazioni giornalistiche.",
     },
     {
       id: 3,
@@ -64,16 +53,11 @@ export default function Works() {
         <img
           src="/img/works/JSBasic.png"
           alt="Questo è un piccolo progetto per muovere i primi passi in JavaScript."
+          className="rounded-lg"
         />
       ),
-      par: (
-        <p>
-          Con questo progetto in JavaScript dovevo programmare un semplice
-          contatore. Per renderlo un po' più accattivante l'ho trasformato in
-          una tombola dove si possono estrarre i numeri evidenziandoli sul
-          tabellone, visualizza gli ultimi 4 estratti e c'è un tasto di reset.
-        </p>
-      ),
+      title: "JS Basic",
+      par: "Con questo progetto in JavaScript dovevo programmare un semplice contatore. Per renderlo un po' più accattivante l'ho trasformato in una tombola dove si possono estrarre i numeri evidenziandoli sul tabellone, visualizza gli ultimi 4 estratti e c'è un tasto di reset.",
     },
     {
       id: 4,
@@ -81,15 +65,11 @@ export default function Works() {
         <img
           src="/img/works/portfolio1.png"
           alt="Il mio primo portfolio in cui ho inserito i primi progetti realizzati."
+          className="rounded-lg"
         />
       ),
-      par: (
-        <p>
-          Il mio primo portfolio in cui ho inserito i primi progetti.
-          Interamente realizzato in HTML e CSS, più qualche piccolo pezzo di
-          Javascript.
-        </p>
-      ),
+      title: "Primo Portfolio",
+      par: "Il mio primo portfolio in cui ho inserito i primi progetti. Interamente realizzato in HTML e CSS, più qualche piccolo di Javascript.",
     },
     {
       id: 5,
@@ -97,16 +77,17 @@ export default function Works() {
         <img
           src="/img/works/Hotel.png"
           alt="Il mio primo progetto in HTML e CSS per creare il sito web di un hotel fittizio."
+          className="rounded-lg"
         />
       ),
-      par: (
-        <p>
-          Questo è stato il mio primo progetto in HTML e CSS per creare il sito
-          web di un hotel fittizio.
-        </p>
-      ),
+      title: "Eco Hotel Pomelia",
+      par: "Questo è stato il mio primo progetto in HTML e CSS per creare il sito web di un hotel fittizio.",
     },
   ];
+
+  const [activeProject, setActiveProject] = useState<number | null>(null);
+
+  console.log(activeProject);
 
   return (
     <>
@@ -118,18 +99,42 @@ export default function Works() {
       <Navbar />
       <h1 className="text-4xl text-center">I miei progetti</h1>
 
-      <div className="flex flex-col items-center md:flex-row md:justify-center md:flex-wrap">
-        {projects.map((project) => (
+      <div className="relative">
+        {activeProject !== null && (
           <div
-            key={project.id}
-            className="w-96 h-72 p-2 my-7 rounded shadow md:mx-7 "
-          >
-            <figure className="m-3 rounded shadow">
-              {project.img}
-              <figcaption className="">{project.par}</figcaption>
-            </figure>
-          </div>
-        ))}
+            className="fixed inset-0 bg-black bg-opacity-50 z-30"
+            onClick={() => setActiveProject(null)}
+          ></div>
+        )}
+
+        <div className="flex flex-col items-center md:flex-row md:justify-center md:flex-wrap">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={`w-96 h-72 p-2 my-7 rounded-lg shadow-lg md:mx-7 transition-transform duration-500 ease-in-out ${
+                activeProject === project.id
+                  ? "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-40 bg-white"
+                  : activeProject !== null
+                  ? "blur-sm"
+                  : "relative hover:scale-110"
+              }`}
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveProject(
+                  activeProject === project.id ? null : project.id
+                );
+              }}
+            >
+              <figure>
+                {project.img}
+                <figcaption className="p-2">
+                  <h2 className="text-xl font-semibold">{project.title}</h2>
+                  <p className="line-clamp-3">{project.par}</p>
+                </figcaption>
+              </figure>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
