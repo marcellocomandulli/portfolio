@@ -109,11 +109,11 @@ export default function Works() {
 
         <div className="flex flex-col items-center md:flex-row md:justify-center md:flex-wrap">
           {projects.map((project) => (
-            <div
+            <figure
               key={project.id}
-              className={`w-96 h-72 p-2 my-7 rounded-lg shadow-lg md:mx-7 transition-transform duration-500 ease-in-out ${
+              className={`w-96 p-2 my-7 rounded-lg shadow-lg md:mx-7 transition-transform duration-500 ease-in-out ${
                 activeProject === project.id
-                  ? "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-40 bg-white"
+                  ? "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-40 bg-[#ffffff4f]"
                   : activeProject !== null
                   ? "blur-sm"
                   : "relative hover:scale-110"
@@ -125,14 +125,24 @@ export default function Works() {
                 );
               }}
             >
-              <figure>
-                {project.img}
-                <figcaption className="p-2">
-                  <h2 className="text-xl font-semibold">{project.title}</h2>
-                  <p className="line-clamp-3">{project.par}</p>
-                </figcaption>
-              </figure>
-            </div>
+              {project.img}
+
+              <figcaption className="p-2">
+                <h2 className="text-xl font-semibold">{project.title}</h2>
+                <p className="line-clamp-3">{project.par}</p>
+              </figcaption>
+
+              {activeProject === project.id && (
+                <div className="flex items-center justify-around mt-4">
+                  <button className="bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
+                    GitHub
+                  </button>
+                  <button className="bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
+                    Sito
+                  </button>
+                </div>
+              )}
+            </figure>
           ))}
         </div>
       </div>

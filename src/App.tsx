@@ -12,10 +12,16 @@ function App() {
         </Helmet>
 
         <Navbar />
-        <h1>Marcello</h1>
-        <h2>simao belli</h2>
+        <div>
+          <h1 className="text-5xl">Marcello</h1>
+          <h2 className="text-3xl">Front End Developer</h2>
+        </div>
 
         <Slider />
+
+        <div>
+          
+        </div>
       </div>
     </>
   );
