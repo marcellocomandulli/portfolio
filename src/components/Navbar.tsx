@@ -8,7 +8,7 @@ export default function Navbar() {
     <>
       <header>
         <nav
-          className="flex justify-around items-center p-3 mb-5 shadow-lg bg-[#ffffffb5]"
+          className="flex justify-around items-center p-3 mb-5 shadow-md bg-[#ffffffb5]"
           aria-label="Main navigation"
         >
           <div className="hidden md:flex md:flex-col md:items-center">

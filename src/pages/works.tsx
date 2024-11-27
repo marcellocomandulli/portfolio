@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { Helmet } from "react-helmet";
+import Footer from "../components/Footer";
 
 export default function Works() {
   interface Project {
@@ -8,6 +9,8 @@ export default function Works() {
     img: JSX.Element;
     title: string;
     par: string;
+    gitURL: string;
+    siteURL: string;
   }
 
   const projects: Project[] = [
@@ -22,6 +25,8 @@ export default function Works() {
       ),
       title: "ItalyCharge",
       par: "Questo è stato il progetto finale del mio Master come Front End Developer su Start2Impact di cui sono molto soddisfatto.",
+      gitURL: "https://github.com/marcellocomandulli/ItalyCharge",
+      siteURL: "https://italycharge.netlify.app",
     },
     {
       id: 1,
@@ -34,6 +39,8 @@ export default function Works() {
       ),
       title: "VegetariApp",
       par: "La mia prima vera app scritta interamente in React.js. Permette di cercare ricette vegetariane utilizzando le API di Spoonacular.",
+      gitURL: "https://github.com/marcellocomandulli/VegetariApp",
+      siteURL: "https://vegetariapp.netlify.app",
     },
     {
       id: 2,
@@ -46,6 +53,8 @@ export default function Works() {
       ),
       title: "JS Advanced",
       par: "Qui ho imparato a fare la chiamata API con JavaScript per poter stampare a schermo delle informazioni giornalistiche.",
+      gitURL: "https://github.com/marcellocomandulli/hackernews",
+      siteURL: "https://hacckernewss.netlify.app",
     },
     {
       id: 3,
@@ -58,6 +67,8 @@ export default function Works() {
       ),
       title: "JS Basic",
       par: "Con questo progetto in JavaScript dovevo programmare un semplice contatore. Per renderlo un po' più accattivante l'ho trasformato in una tombola dove si possono estrarre i numeri evidenziandoli sul tabellone, visualizza gli ultimi 4 estratti e c'è un tasto di reset.",
+      gitURL: "https://github.com/marcellocomandulli/bingo",
+      siteURL: "https://bingocounter.netlify.app",
     },
     {
       id: 4,
@@ -70,6 +81,9 @@ export default function Works() {
       ),
       title: "Primo Portfolio",
       par: "Il mio primo portfolio in cui ho inserito i primi progetti. Interamente realizzato in HTML e CSS, più qualche piccolo di Javascript.",
+      gitURL:
+        "https://github.com/marcellocomandulli/marcellocomandulli.github.io",
+      siteURL: "https://marcellocomandulli.github.io/",
     },
     {
       id: 5,
@@ -82,6 +96,8 @@ export default function Works() {
       ),
       title: "Eco Hotel Pomelia",
       par: "Questo è stato il mio primo progetto in HTML e CSS per creare il sito web di un hotel fittizio.",
+      gitURL: "https://github.com/marcellocomandulli/hotelpomelia",
+      siteURL: "https://marcellocomandulli.github.io/hotelpomelia/",
     },
   ];
 
@@ -97,7 +113,7 @@ export default function Works() {
       </Helmet>
 
       <Navbar />
-      <h1 className="text-4xl text-center">I miei progetti</h1>
+      <h1 className="text-5xl text-center">I miei progetti</h1>
 
       <div className="relative">
         {activeProject !== null && (
@@ -113,7 +129,7 @@ export default function Works() {
               key={project.id}
               className={`w-96 p-2 my-7 rounded-lg shadow-lg md:mx-7 transition-transform duration-500 ease-in-out ${
                 activeProject === project.id
-                  ? "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-40 bg-[#ffffff4f]"
+                  ? "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-40 bg-[#ffffff]"
                   : activeProject !== null
                   ? "blur-sm"
                   : "relative hover:scale-110"
@@ -129,23 +145,65 @@ export default function Works() {
 
               <figcaption className="p-2">
                 <h2 className="text-xl font-semibold">{project.title}</h2>
-                <p className="line-clamp-3">{project.par}</p>
+                <p
+                  className={
+                    activeProject === project.id
+                      ? "line-clamp-3 overflow-y-auto"
+                      : "line-clamp-3"
+                  }
+                >
+                  {project.par}
+                </p>
               </figcaption>
 
               {activeProject === project.id && (
                 <div className="flex items-center justify-around mt-4">
-                  <button className="bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
-                    GitHub
-                  </button>
-                  <button className="bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
-                    Sito
-                  </button>
+                  <a href={project.gitURL}>
+                    <button className="flex justify-center items-center bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
+                      GitHub
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        className="size-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                  <a href={project.siteURL}>
+                    <button className="flex justify-center items-center bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
+                      Sito
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        className="size-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                      </svg>
+                    </button>
+                  </a>
                 </div>
               )}
             </figure>
           ))}
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

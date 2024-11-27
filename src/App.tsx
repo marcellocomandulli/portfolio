@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Slider from "./components/Slider";
 import { Helmet } from "react-helmet";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,8 +21,10 @@ function App() {
         <Slider />
 
         <div>
-          
+          progettoni
         </div>
+
+        <Footer></Footer>
       </div>
     </>
   );
