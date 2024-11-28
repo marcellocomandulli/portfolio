@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
@@ -102,8 +102,6 @@ export default function Works() {
   ];
 
   const [activeProject, setActiveProject] = useState<number | null>(null);
-
-  console.log(activeProject);
 
   return (
     <>
