@@ -117,6 +117,7 @@ export default function Works() {
       </Helmet>
 
       <Navbar />
+
       <h1 className="text-5xl text-center">I miei progetti</h1>
 
       <div className="relative">
@@ -131,7 +132,7 @@ export default function Works() {
           {projects.map((project) => (
             <figure
               key={project.id}
-              className={`w-96 p-2 my-7 rounded-lg shadow-lg md:mx-7 transition-transform duration-500 ease-in-out ${
+              className={`w-96 p-2 mx-5 my-7 rounded-lg shadow-lg md:mx-7 transition-transform duration-500 ease-in-out ${
                 activeProject === project.id
                   ? "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-40 bg-[#ffffff]"
                   : activeProject !== null

@@ -7,13 +7,11 @@ export default function ProjectSlider() {
   const settings = {
     centerMode: true,
     autoplay: true,
-    speed: 500,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 2000,
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 0,
     swipeToSlide: true,
     
   };

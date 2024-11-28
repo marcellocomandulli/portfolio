@@ -16,11 +16,11 @@ export default function App() {
 
         <Navbar />
 
-        <div className="flex flex-col items-center h-svh p-4">
+        <div className="flex flex-col items-center px-8">
           <div>
             <h1 className="text-5xl">Marcello Comandulli</h1>
             <TextRotator />
-            <p className="mt-10">Mi sono congedato dall'Arma dei Carabinieri dopo 6 anni di servizio e iniziato a studiare con Start2Impact University per diventare Front End Developer. <br /><br />Sono stato 3 mesi in Asia zaino in spalla dove ho volato con il mio drone in alcuni dei posti più belli del mondo.<br /><br />Dopo 15 anni di studi di musica, sai cosa mi piace di più? Trovare un pianoforte per strada e iniziare a suonare per la gente che passa.</p>
+            <p className="mt-10 text-justify">Mi sono congedato dall'Arma dei Carabinieri dopo 6 anni di servizio e iniziato a studiare con Start2Impact University per diventare Front End Developer. <br /><br />Sono stato 3 mesi in Asia zaino in spalla dove ho volato con il mio drone in alcuni dei posti più belli del mondo.<br /><br />Dopo 15 anni di studi di musica, sai cosa mi piace di più? Trovare un pianoforte per strada e iniziare a suonare per la gente che passa.</p>
           </div>
 
           <img

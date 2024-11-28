@@ -269,7 +269,7 @@ export default function LogoSlider() {
   return (
     <>
       <div>
-        <Marquee pauseOnHover={true} autoFill={true} className="h-24 overflow-y-hidden">
+        <Marquee pauseOnHover={true} autoFill={true} className="h-24 overflow-y-hidden my-8">
           {images.map((image) => (
             <div className="mx-5">{image.svg}</div>
           ))}
