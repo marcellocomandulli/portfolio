@@ -2,10 +2,10 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className="h-10 shadow-inner flex justify-around items-center">
+        <div className="h-16 w-full shadow-inner flex justify-around items-center">
           <div>
             <h4>
-              &copy; 2024 Marcello Web Developer. Tutti i diritti riservati.
+              &copy; 2024 Marcello Web Developer. <br className="md:hidden" />Tutti i diritti riservati.
             </h4>
           </div>
 

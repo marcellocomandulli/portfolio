@@ -18,9 +18,10 @@ export default function Works() {
       id: 0,
       img: (
         <img
-          src="/img/works/FinalProj.png"
+          src="/img/works/FinalProj.webp"
           alt="ItalyCharge. L'app per trovare le colonnine di ricarica delle auto elettriche."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "ItalyCharge",
@@ -32,9 +33,10 @@ export default function Works() {
       id: 1,
       img: (
         <img
-          src="/img/works/ReactProj.png"
+          src="/img/works/ReactProj.webp"
           alt="VegetariApp. La mia prima vera app interamente sviluppata con React.js."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "VegetariApp",
@@ -46,9 +48,10 @@ export default function Works() {
       id: 2,
       img: (
         <img
-          src="/img/works/JSAdvanced.png"
+          src="/img/works/JSAdvanced.webp"
           alt="Un progetto più avanzato in JavaScript con l'utilizzo di API."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "JS Advanced",
@@ -60,9 +63,10 @@ export default function Works() {
       id: 3,
       img: (
         <img
-          src="/img/works/JSBasic.png"
+          src="/img/works/JSBasic.webp"
           alt="Questo è un piccolo progetto per muovere i primi passi in JavaScript."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "JS Basic",
@@ -74,9 +78,10 @@ export default function Works() {
       id: 4,
       img: (
         <img
-          src="/img/works/portfolio1.png"
+          src="/img/works/portfolio1.webp"
           alt="Il mio primo portfolio in cui ho inserito i primi progetti realizzati."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "Primo Portfolio",
@@ -89,9 +94,10 @@ export default function Works() {
       id: 5,
       img: (
         <img
-          src="/img/works/Hotel.png"
+          src="/img/works/Hotel.webp"
           alt="Il mio primo progetto in HTML e CSS per creare il sito web di un hotel fittizio."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "Eco Hotel Pomelia",

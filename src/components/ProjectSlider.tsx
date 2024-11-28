@@ -5,14 +5,17 @@ import { Link } from "react-router";
 
 export default function ProjectSlider() {
   const settings = {
-    className: "center",
+    centerMode: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 2500,
     dots: true,
     infinite: true,
-    centerMode: true,
-    slidesToShow: 3,
-    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
     swipeToSlide: true,
-    centerPadding: "60px",
+    
   };
 
   interface Project {
@@ -29,9 +32,10 @@ export default function ProjectSlider() {
       id: 0,
       img: (
         <img
-          src="/img/works/FinalProj.png"
+          src="/img/works/FinalProj.webp"
           alt="ItalyCharge. L'app per trovare le colonnine di ricarica delle auto elettriche."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "ItalyCharge",
@@ -43,9 +47,10 @@ export default function ProjectSlider() {
       id: 1,
       img: (
         <img
-          src="/img/works/ReactProj.png"
+          src="/img/works/ReactProj.webp"
           alt="VegetariApp. La mia prima vera app interamente sviluppata con React.js."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "VegetariApp",
@@ -57,9 +62,10 @@ export default function ProjectSlider() {
       id: 2,
       img: (
         <img
-          src="/img/works/JSAdvanced.png"
+          src="/img/works/JSAdvanced.webp"
           alt="Un progetto più avanzato in JavaScript con l'utilizzo di API."
           className="rounded-lg"
+          loading="lazy"
         />
       ),
       title: "JS Advanced",
@@ -70,12 +76,13 @@ export default function ProjectSlider() {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="slider-container flex flex-col">
       <Slider {...settings} className="overflow-hidden">
+
         {projects.map((project) => (
           <figure
             key={project.id}
-            className={"w-96 p-2 my-7 rounded-lg shadow-lg md:mx-16"}
+            className={"w-96 p-2 my-7 rounded-lg shadow-lg "}
           >
             {project.img}
 
@@ -86,7 +93,26 @@ export default function ProjectSlider() {
           </figure>
         ))}
       </Slider>
-      <Link to={"/works"} className="self-end mb-3 mr-10 hover:text-blue-500">Vai ai lavori...</Link>
+      <Link
+        to={"/works"}
+        className="self-end mb-3 mr-10 hover:text-blue-500 flex justify-center items-center "
+      >
+        Vai ai lavori
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="size-4 ml-1"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </Link>
     </div>
   );
 }
