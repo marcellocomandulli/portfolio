@@ -56,7 +56,7 @@ export default function Navbar() {
               <li className="relative">
                 <Link
                   to="/"
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-500"
+                  className="block px-3 py-2 hover:text-blue-500"
                 >
                   Home
                 </Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
               <li className="relative">
                 <Link
                   to="/works"
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-500"
+                  className="block px-3 py-2 hover:text-blue-500"
                 >
                   Works
                 </Link>
@@ -72,7 +72,7 @@ export default function Navbar() {
               <li className="relative">
                 <Link
                   to="/contacts"
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-500"
+                  className="block px-3 py-2 hover:text-blue-500"
                 >
                   Contacts
                 </Link>

@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 
-export default function Slider() {
+export default function LogoSlider() {
   interface Images {
     id: number;
     svg: JSX.Element;
@@ -269,7 +269,7 @@ export default function Slider() {
   return (
     <>
       <div>
-        <Marquee pauseOnHover={true} autoFill={true} className="h-24">
+        <Marquee pauseOnHover={true} autoFill={true} className="h-24 overflow-y-hidden">
           {images.map((image) => (
             <div className="mx-5">{image.svg}</div>
           ))}
