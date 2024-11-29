@@ -164,7 +164,7 @@ export default function Works() {
               {activeProject === project.id && (
                 <div className="flex items-center justify-around mt-4">
                   <a href={project.gitURL}>
-                    <button className="flex justify-center items-center bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
+                    <button className="flex justify-center items-center bg-blue-500 text-white w-28 py-2 rounded-lg hover:bg-blue-700 font-semibold">
                       GitHub
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,7 @@ export default function Works() {
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="currentColor"
-                        className="size-4"
+                        className="size-3"
                       >
                         <path
                           strokeLinecap="round"
@@ -183,7 +183,7 @@ export default function Works() {
                     </button>
                   </a>
                   <a href={project.siteURL}>
-                    <button className="flex justify-center items-center bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
+                    <button className="flex justify-center items-center bg-blue-500 text-white w-28 py-2 rounded-lg hover:bg-blue-700 font-semibold">
                       Sito
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +191,7 @@ export default function Works() {
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="currentColor"
-                        className="size-4"
+                        className="size-3"
                       >
                         <path
                           strokeLinecap="round"

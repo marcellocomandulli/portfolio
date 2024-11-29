@@ -96,9 +96,9 @@ export default function Contacts() {
         <h1 className="text-5xl font-semibold mb-6">
           Contatti
         </h1>
-        <h2 className="text-center">
+        <h2>
           Qui puoi mandare una e-mail, per entrare subito in contatto con me. <br />
-          Verrai immediatamente ricontattato
+          Verrai immediatamente ricontattato.
         </h2>
       </div>
 
@@ -112,7 +112,7 @@ export default function Contacts() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`mt-1 p-3 w-full border rounded-lg shadow-sm focus:outline-none ${
+                className={`mt-1 p-3 w-full border-b  shadow-sm focus:outline-none ${
                   errors.name
                     ? "border-red-500 focus:ring-red-500"
                     : "border-gray-300 focus:ring-blue-500"
@@ -131,7 +131,7 @@ export default function Contacts() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`mt-1 p-3 w-full border rounded-lg shadow-sm focus:outline-none ${
+                className={`mt-1 p-3 w-full border-b shadow-sm focus:outline-none ${
                   errors.email
                     ? "border-red-500 focus:ring-red-500"
                     : "border-gray-300 focus:ring-blue-500"
@@ -150,7 +150,7 @@ export default function Contacts() {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="mt-1 p-3 w-full border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-1 p-3 w-full h-20 overflow-y-auto border-b border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Scrivi il tuo messaggio..."
               ></textarea>
             </div>

@@ -93,7 +93,7 @@ export default function ProjectSlider() {
         to={"/works"}
         className="self-end mb-3 mr-10 flex justify-center items-center "
       >
-        <button className="flex justify-center items-center bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
+        <button className="flex justify-center items-center bg-blue-500 text-white w-36 py-3 rounded-lg hover:bg-blue-700 font-semibold">
           Vai ai lavori
           <svg
             xmlns="http://www.w3.org/2000/svg"

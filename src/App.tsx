@@ -16,7 +16,7 @@ export default function App() {
 
         <Navbar />
 
-        <div className="flex flex-col items-center px-7 md:flex-row md:mb-20 md:px-20">
+        <div className="flex flex-col items-center px-7 md:flex-row md:mx-16 md:mb-20 md:justify-around ">
           <div>
             <h1 className="text-5xl">Marcello Comandulli</h1>
             <TextRotator />
