@@ -92,8 +92,8 @@ export default function Contacts() {
       </Helmet>
 
       <Navbar />
-      <div className="flex flex-col items-center mb-5">
-        <h1 className="text-5xl font-semibold text-gray-800 mb-6">
+      <div className="flex flex-col items-center mb-5 mx-5">
+        <h1 className="text-5xl font-semibold mb-6">
           Contatti
         </h1>
         <h2 className="text-center">
@@ -102,7 +102,7 @@ export default function Contacts() {
         </h2>
       </div>
 
-      <div className="flex justify-center">
+      <div className=" mx-5 flex justify-center">
         <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full mb-16 border border-gray-200">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Nome */}

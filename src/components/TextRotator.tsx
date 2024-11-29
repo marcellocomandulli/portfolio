@@ -9,17 +9,26 @@ export default function TextRotator(): JSX.Element {
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isFadingOut, setIsFadingOut] = useState<boolean>(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % presentation.length);
-    }, 1500);
+      setIsFadingOut(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % presentation.length);
+        setIsFadingOut(false);
+      }, 500);
+    }, 2000);
     return () => clearInterval(interval);
   }, [presentation.length]);
 
   return (
-    <>
-      <h2 className="text-3xl mt-4">{presentation[currentIndex]}</h2>
-    </>
+    <h2
+      className={`text-3xl mt-4 transition-opacity duration-500 ${
+        isFadingOut ? "opacity-0" : "opacity-100"
+      }`}
+    >
+      {presentation[currentIndex]}
+    </h2>
   );
 }

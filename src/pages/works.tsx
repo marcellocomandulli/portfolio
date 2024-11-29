@@ -128,11 +128,12 @@ export default function Works() {
           ></div>
         )}
 
-        <div className="flex flex-col items-center md:flex-row md:justify-center md:flex-wrap">
+        <div className="flex flex-col items-center mb-4 md:flex-row md:justify-center md:flex-wrap">
           {projects.map((project) => (
+
             <figure
               key={project.id}
-              className={`w-96 p-2 mx-5 my-7 rounded-lg shadow-lg md:mx-7 transition-transform duration-500 ease-in-out ${
+              className={`w-80 p-2 mx-5 my-7 rounded-lg shadow-lg md:w-96 md:mx-7 transition-transform duration-500 ease-in-out ${
                 activeProject === project.id
                   ? "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-40 bg-[#ffffff]"
                   : activeProject !== null

@@ -13,7 +13,6 @@ export default function ProjectSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     swipeToSlide: true,
-    
   };
 
   interface Project {
@@ -74,13 +73,12 @@ export default function ProjectSlider() {
   ];
 
   return (
-    <div className="slider-container flex flex-col">
+    <div className="slider-container flex flex-col mb-5">
       <Slider {...settings} className="overflow-hidden">
-
         {projects.map((project) => (
           <figure
             key={project.id}
-            className={"w-96 p-2 my-7 rounded-lg shadow-lg "}
+            className={"p-2 my-7 rounded-lg shadow-lg"}
           >
             {project.img}
 
@@ -93,23 +91,25 @@ export default function ProjectSlider() {
       </Slider>
       <Link
         to={"/works"}
-        className="self-end mb-3 mr-10 hover:text-blue-500 flex justify-center items-center "
+        className="self-end mb-3 mr-10 flex justify-center items-center "
       >
-        Vai ai lavori
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className="size-4 ml-1"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-          />
-        </svg>
+        <button className="flex justify-center items-center bg-blue-500 px-6 py-1 rounded-lg hover:bg-blue-700 font-semibold">
+          Vai ai lavori
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="size-4 ml-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </button>
       </Link>
     </div>
   );
