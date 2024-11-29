@@ -130,15 +130,14 @@ export default function Works() {
 
         <div className="flex flex-col items-center mb-4 md:flex-row md:justify-center md:flex-wrap">
           {projects.map((project) => (
-
             <figure
               key={project.id}
-              className={`w-80 p-2 mx-5 my-7 rounded-lg shadow-lg md:w-96 md:mx-7 transition-transform duration-500 ease-in-out ${
+              className={`w-80 p-2 mx-5 my-7 rounded-lg shadow-lg md:w-96 md:mx-7 transition-all duration-500 ease-in-out ${
                 activeProject === project.id
-                  ? "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-40 bg-[#ffffff]"
+                  ? "fixed top-40 scale-105 md:scale-150 z-40 bg-[#ffffff] animate-zoomIn"
                   : activeProject !== null
                   ? "blur-sm"
-                  : "relative hover:scale-110"
+                  : "relative md:hover:scale-110"
               }`}
               onClick={(e) => {
                 e.stopPropagation();
@@ -171,13 +170,13 @@ export default function Works() {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="size-4"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
                         />
                       </svg>
@@ -190,13 +189,13 @@ export default function Works() {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="size-4"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
                         />
                       </svg>

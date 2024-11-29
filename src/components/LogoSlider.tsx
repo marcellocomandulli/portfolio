@@ -5,7 +5,7 @@ export default function LogoSlider() {
     id: number;
     svg: JSX.Element;
   }
-  
+
   const images: Images[] = [
     {
       id: 0,
@@ -14,9 +14,8 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
           viewBox="0 0 48 48"
+          className="w-16 md:w-28"
         >
           <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
           <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
@@ -38,9 +37,8 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
           viewBox="0 0 48 48"
+          className="w-16 md:w-28"
         >
           <linearGradient
             id="TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1"
@@ -87,8 +85,7 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
+          className="w-16 md:w-28"
           viewBox="0 0 48 48"
         >
           <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path>
@@ -106,8 +103,7 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
+          className="w-16 md:w-28"
           viewBox="0 0 48 48"
         >
           <rect width="36" height="36" x="6" y="6" fill="#1976d2"></rect>
@@ -129,8 +125,7 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
+          className="w-16 md:w-28"
           viewBox="0 0 48 48"
         >
           <path
@@ -147,8 +142,7 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
+          className="w-16 md:w-28"
           viewBox="0 0 48 48"
         >
           <path
@@ -174,8 +168,7 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
+          className="w-16 md:w-28"
           viewBox="0 0 48 48"
         >
           <linearGradient
@@ -220,8 +213,7 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
+          className="w-16 md:w-28"
           viewBox="0 0 48 48"
         >
           <linearGradient
@@ -249,8 +241,7 @@ export default function LogoSlider() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="100"
-          height="100"
+          className="w-16 md:w-28"
           viewBox="0 0 48 48"
         >
           <path
@@ -269,7 +260,12 @@ export default function LogoSlider() {
   return (
     <>
       <div>
-        <Marquee pauseOnHover={true} speed={100} autoFill={true} className="h-24 overflow-y-hidden my-10">
+        <Marquee
+          pauseOnHover={true}
+          speed={100}
+          autoFill={true}
+          className="h-24 overflow-y-hidden my-10"
+        >
           {images.map((image) => (
             <div className="mx-5">{image.svg}</div>
           ))}
