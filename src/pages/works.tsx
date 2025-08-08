@@ -18,14 +18,14 @@ export default function Works() {
       id: 0,
       img: (
         <img
-          src="/img/works/FinalProj.webp"
+          src="/img/works/FinalProj.jpg"
           alt="ItalyCharge. L'app per trovare le colonnine di ricarica delle auto elettriche."
           className="rounded-lg"
           loading="lazy"
         />
       ),
       title: "ItalyCharge",
-      par: "Questo è stato il progetto finale del mio Master come Front End Developer su Start2Impact di cui sono molto soddisfatto.",
+      par: "Questo è stato il progetto finale del mio Master come Front End Developer su Start2Impact.",
       gitURL: "https://github.com/marcellocomandulli/ItalyCharge",
       siteURL: "https://italycharge.netlify.app",
     },
@@ -33,7 +33,7 @@ export default function Works() {
       id: 1,
       img: (
         <img
-          src="/img/works/ReactProj.webp"
+          src="/img/works/ReactProj.jpeg"
           alt="VegetariApp. La mia prima vera app interamente sviluppata con React.js."
           className="rounded-lg"
           loading="lazy"
@@ -48,7 +48,7 @@ export default function Works() {
       id: 2,
       img: (
         <img
-          src="/img/works/JSAdvanced.webp"
+          src="/img/works/JSAdvanced.jpg"
           alt="Un progetto più avanzato in JavaScript con l'utilizzo di API."
           className="rounded-lg"
           loading="lazy"
@@ -63,7 +63,7 @@ export default function Works() {
       id: 3,
       img: (
         <img
-          src="/img/works/JSBasic.webp"
+          src="/img/works/JSBasic.jpg"
           alt="Questo è un piccolo progetto per muovere i primi passi in JavaScript."
           className="rounded-lg"
           loading="lazy"
@@ -78,7 +78,7 @@ export default function Works() {
       id: 4,
       img: (
         <img
-          src="/img/works/portfolio1.webp"
+          src="/img/works/portfolio1.jpeg"
           alt="Il mio primo portfolio in cui ho inserito i primi progetti realizzati."
           className="rounded-lg"
           loading="lazy"
@@ -94,7 +94,7 @@ export default function Works() {
       id: 5,
       img: (
         <img
-          src="/img/works/Hotel.webp"
+          src="/img/works/Hotel.jpg"
           alt="Il mio primo progetto in HTML e CSS per creare il sito web di un hotel fittizio."
           className="rounded-lg"
           loading="lazy"

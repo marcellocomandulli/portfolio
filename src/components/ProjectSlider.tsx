@@ -29,7 +29,7 @@ export default function ProjectSlider() {
       id: 0,
       img: (
         <img
-          src="/img/works/FinalProj.webp"
+          src="/img/works/FinalProj.jpg"
           alt="ItalyCharge. L'app per trovare le colonnine di ricarica delle auto elettriche."
           className="rounded-lg"
           loading="lazy"
@@ -44,7 +44,7 @@ export default function ProjectSlider() {
       id: 1,
       img: (
         <img
-          src="/img/works/ReactProj.webp"
+          src="/img/works/ReactProj.jpeg"
           alt="VegetariApp. La mia prima vera app interamente sviluppata con React.js."
           className="rounded-lg"
           loading="lazy"
@@ -59,7 +59,7 @@ export default function ProjectSlider() {
       id: 2,
       img: (
         <img
-          src="/img/works/JSAdvanced.webp"
+          src="/img/works/JSAdvanced.jpg"
           alt="Un progetto più avanzato in JavaScript con l'utilizzo di API."
           className="rounded-lg"
           loading="lazy"
