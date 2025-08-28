@@ -66,7 +66,7 @@ export default function Navbar() {
                   to="/works"
                   className="block px-3 py-2 hover:text-blue-500"
                 >
-                  Works
+                  Lavori
                 </Link>
               </li>
               <li className="relative">
@@ -74,7 +74,7 @@ export default function Navbar() {
                   to="/contacts"
                   className="block px-3 py-2 hover:text-blue-500"
                 >
-                  Contacts
+                  Contatti
                 </Link>
               </li>
             </ul>

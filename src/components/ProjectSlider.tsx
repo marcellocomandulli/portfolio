@@ -6,6 +6,7 @@ import { Link } from "react-router";
 export default function ProjectSlider() {
   const settings = {
     centerMode: true,
+    centerPadding: "100px",
     autoplay: true,
     autoplaySpeed: 2000,
     dots: true,
@@ -70,16 +71,29 @@ export default function ProjectSlider() {
       gitURL: "https://github.com/marcellocomandulli/hackernews",
       siteURL: "https://hacckernewss.netlify.app",
     },
+    {
+      id: 3,
+      img: (
+        <img
+          src="/img/works/JSBasic.jpg"
+          alt="Questo è un piccolo progetto per muovere i primi passi in JavaScript."
+          className="rounded-lg"
+          loading="lazy"
+        />
+      ),
+      title: "JS Basic",
+      par: "Con questo progetto in JavaScript dovevo programmare un semplice contatore. Per renderlo un po' più accattivante l'ho trasformato in una tombola dove si possono estrarre i numeri evidenziandoli sul tabellone, visualizza gli ultimi 4 estratti e c'è un tasto di reset.",
+      gitURL: "https://github.com/marcellocomandulli/bingo",
+      siteURL: "https://bingocounter.netlify.app",
+    },
   ];
 
   return (
-    <div className="slider-container flex flex-col mb-5 max-w-xl">
-      <Slider {...settings} className="overflow-hidden">
+    <div className="slider-container relative flex flex-col mx-auto mb-6 lg:w-[850px]">
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-8 z-10 bg-gradient-to-r from-white/90 to-transparent"></div>
+      <Slider {...settings}>
         {projects.map((project) => (
-          <figure
-            key={project.id}
-            className={"p-2 my-7 rounded-lg shadow-lg"}
-          >
+          <figure key={project.id} className={"p-2 my-7 rounded-lg shadow-lg"}>
             {project.img}
 
             <figcaption className="p-2">
@@ -89,9 +103,10 @@ export default function ProjectSlider() {
           </figure>
         ))}
       </Slider>
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-8 z-10 bg-gradient-to-l from-white/90 to-transparent"></div>
       <Link
         to={"/works"}
-        className="self-end mb-3 mr-10 flex justify-center items-center "
+        className="hidden md:flex self-end mb-3 mr-10 justify-center items-center"
       >
         <button className="flex justify-center items-center bg-blue-500 text-white w-36 py-3 rounded-lg hover:bg-blue-700 font-semibold">
           Vai ai lavori
