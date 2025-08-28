@@ -89,7 +89,7 @@ export default function ProjectSlider() {
   ];
 
   return (
-    <div className="slider-container relative flex flex-col mx-auto mb-6 lg:w-[850px]">
+    <div className="slider-container relative flex flex-col mx-auto lg:w-[850px]">
       <div className="hidden md:block pointer-events-none absolute left-0 top-0 h-full w-8 z-10 bg-gradient-to-r from-white/90 to-transparent"></div>
       <Slider {...settings}>
         {projects.map((project) => (
