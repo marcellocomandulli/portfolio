@@ -73,7 +73,7 @@ export default function ProjectSlider() {
   ];
 
   return (
-    <div className="slider-container flex flex-col mb-5">
+    <div className="slider-container flex flex-col mb-5 max-w-xl">
       <Slider {...settings} className="overflow-hidden">
         {projects.map((project) => (
           <figure
