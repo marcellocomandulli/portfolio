@@ -90,7 +90,7 @@ export default function ProjectSlider() {
 
   return (
     <div className="slider-container relative flex flex-col mx-auto mb-6 lg:w-[850px]">
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-8 z-10 bg-gradient-to-r from-white/90 to-transparent"></div>
+      <div className="hidden md:block pointer-events-none absolute left-0 top-0 h-full w-8 z-10 bg-gradient-to-r from-white/90 to-transparent"></div>
       <Slider {...settings}>
         {projects.map((project) => (
           <figure key={project.id} className={"p-2 my-7 rounded-lg shadow-lg"}>
@@ -103,7 +103,7 @@ export default function ProjectSlider() {
           </figure>
         ))}
       </Slider>
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-8 z-10 bg-gradient-to-l from-white/90 to-transparent"></div>
+      <div className="hidden md:block pointer-events-none absolute right-0 top-0 h-full w-8 z-10 bg-gradient-to-l from-white/90 to-transparent"></div>
       <Link
         to={"/works"}
         className="hidden md:flex self-end mb-3 mr-10 justify-center items-center"
